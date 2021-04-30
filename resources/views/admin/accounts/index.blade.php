@@ -25,9 +25,9 @@
             <tbody>
                 @foreach($users as $user)
                     <tr>
-                        <th scope="row">{{ $user->id }}</th>
-                        <th>{{ $user->name }}</th>
-                        <th><a href="{{ route('admin.accounts.details', ['id' => $user->id]) }}" class="btn btn-primary btn-sm w-100">Details</a></th>
+                        <td scope="row">{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td><a href="{{ route('admin.accounts.details', ['id' => $user->id]) }}" class="btn btn-primary btn-sm w-100">Details</a></td>
                     </tr>
                 @endforeach
             </tbody>

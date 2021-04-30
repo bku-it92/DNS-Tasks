@@ -30,12 +30,12 @@
                 <tbody>
                 @foreach($answers as $answer)
                     <tr>
-                        <th scope="row">{{ $answer->question->id }}</th>
-                        <th>{{ $answer->question->question }}</th>
-                        <th>{{ $answer->question->answer }}</th>
-                        <th>{{ $answer->answer }}</th>
-                        <th class="text-center"><input type="checkbox" @if ($answer->is_correct) checked @endif onclick="return false;"></th>
-                        <th>
+                        <td scope="row">{{ $answer->question->id }}</td>
+                        <td>{{ $answer->question->question }}</td>
+                        <td>{{ $answer->question->answer }}</td>
+                        <td>{{ $answer->answer }}</td>
+                        <td class="text-center"><input type="checkbox" @if ($answer->is_correct) checked @endif onclick="return false;"></td>
+                        <td>
                             <div class="d-flex flex-row gap-1">
                                 <form method="post" action="{{ route('admin.answered.state', ['id' => $answer->id]) }}" class="flex-grow-1">
                                     <input type="checkbox" name="state" class="d-none" checked>
@@ -46,7 +46,7 @@
                                     <button type="submit" class="w-100 btn btn-danger btn-sm">Falsch</button>
                                 </form>
                             </div>
-                        </th>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>

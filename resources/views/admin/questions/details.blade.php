@@ -100,10 +100,10 @@
                             $user = \App\Models\User::find($answer->user_id);
                         @endphp
                         <tr>
-                            <th scope="row">{{ $user->name }}</th>
-                            <th>{{ $answer->answer }}</th>
-                            <th class="text-center"><input type="checkbox" @if ($answer->is_correct) checked @endif onclick="return false;"></th>
-                            <th><a href="{{ route('admin.accounts.details.answers', ['id' => $user->id]) }}" class="btn btn-primary btn-sm w-100">Antworten ansehen</a></th>
+                            <td scope="row">{{ $user->name }}</td>
+                            <td>{{ $answer->answer }}</td>
+                            <td class="text-center"><input type="checkbox" @if ($answer->is_correct) checked @endif onclick="return false;"></td>
+                            <td><a href="{{ route('admin.accounts.details.answers', ['id' => $user->id]) }}" class="btn btn-primary btn-sm w-100">Antworten ansehen</a></td>
                         </tr>
                     @endforeach
                     </tbody>

@@ -27,11 +27,11 @@
                 <tbody>
                 @foreach($questions as $question)
                     <tr>
-                        <th scope="row">{{ $question->id }}</th>
-                        <th>{{ $question->question }}</th>
-                        <th>{{ $question->answeredQuestions()->count() }}</th>
-                        <th>{{ $user }}</th>
-                        <th><a href="{{ route('admin.questions.details', ['id' => $question->id]) }}" class="btn btn-primary btn-sm w-100">Details</a></th>
+                        <td scope="row">{{ $question->id }}</td>
+                        <td>{{ $question->question }}</td>
+                        <td>{{ $question->answeredQuestions()->count() }}</td>
+                        <td>{{ $user }}</td>
+                        <td><a href="{{ route('admin.questions.details', ['id' => $question->id]) }}" class="btn btn-primary btn-sm w-100">Details</a></td>
                     </tr>
                 @endforeach
                 </tbody>
