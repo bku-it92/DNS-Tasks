@@ -110,6 +110,5 @@
                 </table>
             </div>
         </div>
-        <pre><code>@json($question->answeredQuestions()->get(), JSON_PRETTY_PRINT)</code></pre>
     </div>
 @endsection
