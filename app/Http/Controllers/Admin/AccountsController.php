@@ -49,7 +49,11 @@ class AccountsController extends Controller
             $data['email'] = $user->email;
         }
 
-        $this->validator($data)->validate();
+        $validator = Validator::make($data, [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+        ]);
+        $validator->validate();
 
         $user->name = $data['name'];
         $user->email = $data['email'];

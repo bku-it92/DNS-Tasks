@@ -14,7 +14,7 @@
                     <div class="card-header">{{ __('Benutzername aktualisieren') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ 1 || route('admin.accounts.update') }}">
+                        <form method="POST" action="{{ route('admin.accounts.edit', ['id' => $user->id]) }}">
                             @csrf
                             <div class="form-group row mb-3">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Benutzername') }}</label>
@@ -48,7 +48,7 @@
                     <div class="card-header">{{ __('Email aktualisieren') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ 1 || route('admin.accounts.update') }}">
+                        <form method="POST" action="{{ route('admin.accounts.edit', ['id' => $user->id]) }}">
                             @csrf
                             <div class="form-group row mb-3">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email-Adresse') }}</label>

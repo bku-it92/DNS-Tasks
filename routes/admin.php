@@ -8,6 +8,7 @@ Route::prefix('accounts')->group(function() {
     Route::post('create', [App\Http\Controllers\Admin\AccountsController::class, 'insert'])->name('admin.accounts.create');
     Route::get('details/{id}', [App\Http\Controllers\Admin\AccountsController::class, 'details'])->name('admin.accounts.details');
     Route::get('details/{id}/answers', [App\Http\Controllers\Admin\AccountsController::class, 'answers'])->name('admin.accounts.details.answers');
+    Route::post('details/{id}/edit', [App\Http\Controllers\Admin\AccountsController::class, 'edit'])->name('admin.accounts.edit');
     Route::post('details/{id}/answers/{questionId}', [App\Http\Controllers\Admin\AccountsController::class, 'answers'])->name('admin.accounts.details.answers.edit');
 });
 
